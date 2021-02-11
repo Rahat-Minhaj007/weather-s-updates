@@ -12,7 +12,7 @@ const input = () => {
     }
 }
 const displayWeather = weather =>{
-    console.log(weather);
+    // console.log(weather);
         const songContainer = document.getElementById("weather-container");
 
         songContainer.innerHTML= `
