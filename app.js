@@ -5,14 +5,14 @@ const input = () => {
 
     }
     else {
-        const url = `http://api.openweathermap.org/data/2.5/weather?q=${searchInput}&appid=c353cb8d347d6fea12bf0a7afa191d63`;
+        const url = `https://api.openweathermap.org/data/2.5/weather?q=${searchInput}&appid=c353cb8d347d6fea12bf0a7afa191d63`;
         fetch(url)
             .then(res => res.json())
             .then(data => displayWeather(data));
     }
 }
 const displayWeather = weather =>{
-    // console.log(weather);
+    console.log(weather);
         const songContainer = document.getElementById("weather-container");
 
         songContainer.innerHTML= `
