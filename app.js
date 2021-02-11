@@ -11,14 +11,14 @@ const input = () => {
             .then(data => displayWeather(data));
     }
 }
-const displayWeather = weather =>{
+const displayWeather = weather => {
     console.log(weather);
-        const songContainer = document.getElementById("weather-container");
+    const songContainer = document.getElementById("weather-container");
 
-        songContainer.innerHTML= `
+    songContainer.innerHTML = `
         <img src="https://openweathermap.org/img/wn/${weather.weather[0].icon}.png" alt="">
             <h1>${weather.name}</h1>
-            <h3><span>${weather.main.temp}</span>&deg;C</h3>
+            <h3><span>${(Math.round((weather.main.temp) - (273)))}</span>&deg;C</h3>
             <h1 class="lead">${weather.weather[0].description}</h1>
         
         `
